@@ -1,2 +1,2 @@
-# ProjetoFinal_TCC
+# ProjetoFinalTCC
 Projeto Final Saver, projeto desenvolvido durante o TCC.
