@@ -7,7 +7,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__, template_folder='template', static_folder='template/assets')
 
 # Treina lá, usa cá
-modelo_pipeline = pickle.load(open('./models/pipe.pkl', 'rb'))
+modelo_pipeline = pickle.load(open('./models/model.pkl', 'rb'))
 
 
 @app.route('/')
@@ -21,35 +21,24 @@ def dados_cliente():
 
 
 def get_data():
-    tenure = request.form.get('tenure')
-    MonthlyCharges = request.form.get('MonthlyCharges')
-    TotalCharges = request.form.get('TotalCharges')
-    gender = request.form.get('gender')
-    SeniorCitizen = request.form.get('SeniorCitizen')
-    Partner = request.form.get('Partner')
-    Dependents = request.form.get('Dependents')
-    PhoneService = request.form.get('PhoneService')
-    MultipleLines = request.form.get('MultipleLines')
-    InternetService = request.form.get('InternetService')
-    OnlineSecurity = request.form.get('OnlineSecurity')
-    OnlineBackup = request.form.get('OnlineBackup')
-    DeviceProtection = request.form.get('DeviceProtection')
-    TechSupport = request.form.get('TechSupport')
-    StreamingTV = request.form.get('StreamingTV')
-    StreamingMovies = request.form.get('StreamingMovies')
-    Contract = request.form.get('Contract')
-    PaperlessBilling = request.form.get('PaperlessBilling')
-    PaymentMethod = request.form.get('PaymentMethod')
+    idade = request.form.get('idade')
+    renda = request.form.get('renda')
+    propriedadeCasa = request.form.get('propriedadeCasa')
+    tempoEmpregado = request.form.get('tempoEmpregado')
+    intensaoInvestimento = request.form.get('intensaoInvestimento')
+    valorInvestimento = request.form.get('valorInvestimento')
+    taxaJuros = request.form.get('taxaJuros')
+    situacaoInvestimento = request.form.get('situacaoInvestimento')
+    retornoInvestimento = request.form.get('retornoInvestimento')
+    jaInvesteOunao = request.form.get('jaInvesteOunao')
+    tempoInvestimento = request.form.get('tempoInvestimento')
 
-    d_dict = {'tenure': [tenure], 'MonthlyCharges': [MonthlyCharges], 'TotalCharges': [TotalCharges],
-              'gender': [gender], 'SeniorCitizen': [SeniorCitizen], 'Partner': [Partner],
-              'Dependents': [Dependents], 'PhoneService': [PhoneService],
-              'MultipleLines': [MultipleLines], 'InternetService': [InternetService],
-              'OnlineSecurity': [OnlineSecurity], 'OnlineBackup': [OnlineBackup],
-              'DeviceProtection': [DeviceProtection], 'TechSupport': [TechSupport],
-              'StreamingTV': [StreamingTV], 'StreamingMovies': [StreamingMovies],
-              'Contract': [Contract], 'PaperlessBilling': [PaperlessBilling],
-              'PaymentMethod': [PaymentMethod]}
+
+    d_dict = {'idade': [idade], 'renda': [renda], 'propriedadeCasa': [propriedadeCasa],
+              'tempoEmpregado': [tempoEmpregado], 'intensaoInvestimento': [intensaoInvestimento],
+              'valorInvestimento': [valorInvestimento], 'taxaJuros': [taxaJuros],
+              'situacaoInvestimento': [situacaoInvestimento], 'retornoInvestimento': [retornoInvestimento],
+              'jaInvesteOunao': [jaInvesteOunao], 'tempoInvestimento': [tempoInvestimento]}
 
     return pd.DataFrame.from_dict(d_dict, orient='columns')
 
@@ -57,34 +46,44 @@ def get_data():
 @app.route('/send', methods=['POST'])
 def show_data():
     df = get_data()
-    df = df[['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
-       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
-       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
-       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
-       'MonthlyCharges', 'TotalCharges']]
+    df = df[['idade', 'renda', 'propriedadeCasa', 'tempoEmpregado', 'intensaoInvestimento',
+       'valorInvestimento', 'taxaJuros', 'situacaoInvestimento', 'retornoInvestimento',
+       'jaInvesteOunao', 'tempoInvestimento']]
 
     prediction = modelo_pipeline.predict(df)
-    # outcome = 'DANGER!!! VAI VAZAR! TELEMARKETING NELE!!'
-    # imagem = 'chefe_brabo.jpg'
-    # outcome = 'Moderado'
-    # imagem = 'Moderado.png'
+
     if prediction == 0:
-        # outcome = 'Ufa... esse cliente vai ficar!! Aproveita pra entubar uns serviços novos!'
-        # imagem = 'chefe_feliz.jpg'
-        outcome = 'Arrojado'
+        outcome = 'Arrojado-0'
         imagem = 'Arrojado.png'
 
     if prediction == 1:
-        # outcome = 'Ufa... esse cliente vai ficar!! Aproveita pra entubar uns serviços novos!'
-        # imagem = 'chefe_feliz.jpg'
-        outcome = 'Moderado'
-        imagem = 'Moderado.png'
+        outcome = 'Arrojado-1'
+        imagem = 'Arrojado.png'
 
     if prediction == 2:
-        # outcome = 'Ufa... esse cliente vai ficar!! Aproveita pra entubar uns serviços novos!'
-        # imagem = 'chefe_feliz.jpg'
-        outcome = 'Conservador'
+        outcome = 'Moderado-2'
+        imagem = 'Moderado.png'
+
+    if prediction == 3:
+        outcome = 'Moderado-3'
+        imagem = 'Moderado.png'
+
+    if prediction == 4:
+        outcome = 'Conservador-4'
         imagem = 'conservador.png'
+
+    if prediction == 5:
+        outcome = 'Conservador-5'
+        imagem = 'conservador.png'
+
+    if prediction == 6:
+        outcome = 'Conservador-6'
+        imagem = 'conservador.png'
+
+    if prediction == 7:
+        outcome = 'Conservador-7'
+        imagem = 'conservador.png'
+
 
 
     return render_template('result.html', tables=[df.to_html(classes='data', header=True, col_space=10)],

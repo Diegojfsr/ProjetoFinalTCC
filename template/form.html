@@ -41,8 +41,8 @@
         <li class="link"><a href="#">Service</a></li>
         <li class="link"><a href="#">About</a></li>
         <li class="link"><a href="#">Community</a></li>
-        <li><a class="btn" href="/dados_cliente">Join Now</a></li>
-        <li><a class="btn1" href="/dados_cliente">Join Now</a></li> <!--esse botao fica escondido no modo web e aparece no modo mobile-->
+        <li><a class="btn" href="/dados_cliente">Predicao</a></li>
+        <li><a class="btn1" href="/dados_cliente">Predicao</a></li> <!--esse botao fica escondido no modo web e aparece no modo mobile-->
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
     <!-- <button class="btn" href="/dados_cliente">Join Now</button> -->
@@ -66,156 +66,81 @@
 
                         <table cellpadding="10" cellspacing="10">
                             <tr>
-                                <td class="col-label"><label>Tenure</label></td>
-                                <td class="col-input"><input type="text" class="form-control" name="tenure"
-                                                             placeholder="Tenure"></td>
-                                <td class="col-label"><label>MonthlyCharges</label></td>
-                                <td class="col-input"><input type="text" class="form-control" name="MonthlyCharges"
-                                                             placeholder="MonthlyCharges"></td>
+                                <td class="col-label"><label>idade</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="idade" placeholder="idade"></td>
+                                
+                                <td class="col-label"><label>renda</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="renda" placeholder="renda"></td>
                             </tr>
 
                             <tr>
-                                <td class="col-label"><label>TotalCharges</label></td>
-                                <td class="col-input"><input type="text" class="form-control" name="TotalCharges"
-                                                             placeholder="TotalCharges"></td>
-                                <td class="col-label"><label>Gender</label></td>
+                                <!-- <td class="col-label"><label>propriedadeCasa</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="propriedadeCasa" placeholder="propriedadeCasa"></td> -->
+
+                                <td class="col-label"><label>propriedadeCasa</label></td>
                                 <td class="col-input">
-                                    <select class="custom-select" name="gender">
-                                        <option value='Male'>Male</option>
-                                        <option value='Female'>Female</option>
+                                    <select class="custom-select" name="propriedadeCasa">
+                                        <option value='1'>ALUGUEL</option>
+                                        <option value='2'>PRÓPRIO</option>
+                                        <option value='3'>HIPOTECA</option>
+                                        <option value='4'>OUTROS</option>
                                     </select></td>
+
+                                    <td class="col-label"><label>tempoEmpregado</label></td>
+                                    <td class="col-input"><input type="text" class="form-control" name="tempoEmpregado" placeholder="tempoEmpregado"></td>
                             </tr>
 
                             <tr>
-                                <td class="col-label"><label>Senior-Citizen</label></td>
+                                <td class="col-label"><label>intensaoInvestimento</label></td>
                                 <td class="col-input">
-                                    <select class="custom-select" name="SeniorCitizen">
-                                        <option value="1">Yes</option>
-                                        <option value="0">No</option>
+                                    <select class="custom-select" name="intensaoInvestimento">
+                                        <option value='1'>PESSOAL</option>
+                                        <option value='2'>EDUCAÇÃO</option>
+                                        <option value='3'>MÉDICO</option>
+                                        <option value='4'>PESSOAL</option>
+                                        <option value='5'>RISCO</option>
                                     </select></td>
-                                <td class="col-label"><label>Partner</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="Partner">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
+
+                                <!-- <td class="col-label"><label>intensaoInvestimento</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="intensaoInvestimento" placeholder="intensaoInvestimento"></td> -->
+
+                                <td class="col-label"><label>valorInvestimento,</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="valorInvestimento" placeholder="valorInvestimento"></td>
                             </tr>
 
                             <tr>
-                                <td class="col-label"><label>Dependents</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="Dependents">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
+                                <td class="col-label"><label>taxaJuros</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="taxaJuros" placeholder="taxaJuros"></td>
 
-                                <td class="col-label"><label>PhoneService</label></td>
+                                <!-- <td class="col-label"><label>situacaoInvestimento</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="situacaoInvestimento" placeholder="situacaoInvestimento"></td> -->
+                                
+
+                                <td class="col-label"><label>situacaoInvestimento</label></td>
                                 <td class="col-input">
-                                    <select class="custom-select" name="PhoneService">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                    <select class="custom-select" name="situacaoInvestimento">
+                                        <option value="1">APROVADO</option>
+                                        <option value="0">REPROVADO</option>
                                     </select></td>
                             </tr>
 
 
                             <tr>
-                                <td class="col-label"><label>MultipleLines</label></td>
+                                <td class="col-label"><label>retornoInvestimento</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="retornoInvestimento" placeholder="retornoInvestimento"></td>
+
+                                <!-- <td class="col-label"><label>jaInvesteOunao</label></td>
+                                <td class="col-input"><input type="text" class="form-control" name="jaInvesteOunao" placeholder="jaInvesteOunao"></td> -->
+
+                                <td class="col-label"><label>jaInvesteOunao</label></td>
                                 <td class="col-input">
-                                    <select class="custom-select" name="MultipleLines">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                        <option value="No phone service">No phone service</option>
+                                    <select class="custom-select" name="jaInvesteOunao">
+                                        <option value="1">SIM</option>
+                                        <option value="0">NAO</option>
                                     </select></td>
 
-                                <td class="col-label"><label>InternetService</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="InternetService">
-                                        <option value="Fiber optic">Fiber optic</option>
-                                        <option value="DSL">DSL</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-label"><label>OnlineSecurity</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="OnlineSecurity">
-                                        <option value="No internet service">No internet service</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-
-                                <td class="col-label"><label>OnlineBackup</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="OnlineBackup">
-                                        <option value="No internet service">No internet service</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-label"><label>DeviceProtection</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="DeviceProtection">
-                                        <option value="No">No internet service</option>
-                                        <option value="Yes">DeviceProtection_Yes</option>
-                                        <option value="No internet service">No</option>
-                                    </select></td>
-
-                                <td class="col-label"><label>TechSupport</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="TechSupport">
-                                        <option value="No internet service">No internet service</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-label"><label>StreamingTV</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="StreamingTV">
-                                        <option value="No internet service">No Internet service</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-
-                                <td class="col-label"><label>StreamingMovies</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="StreamingMovies">
-                                        <option value="No internet service">No Internet service</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-label"><label>Contract</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="Contract">
-                                        <option value="Month-to-month">Month-to-month</option>
-                                        <option value="Two year">Two year</option>
-                                        <option value="One year">One year</option>
-                                    </select></td>
-
-                                <td class="col-label"><label>PaperlessBilling</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="PaperlessBilling">
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-label"><label>PaymentMethod</label></td>
-                                <td class="col-input">
-                                    <select class="custom-select" name="PaymentMethod">
-                                        <option value="Electronic check">Electronic check</option>
-                                        <option value="Mailed check">Mailed check</option>
-                                        <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
-                                        <option value="Credit card (automatic)">Credit card (automatic)</option>
-                                    </select></td>
+                                    <td class="col-label"><label>tempoInvestimento</label></td>
+                                    <td class="col-input"><input type="text" class="form-control" name="tempoInvestimento" placeholder="tempoInvestimento"></td>
                             </tr>
 
                             <tr class="form_wrapper">
