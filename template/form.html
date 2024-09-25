@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,633 +7,563 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Formulario</title>
-  <!-- Template Main CSS File HOME -->
-  <link rel="stylesheet" href="assets/css/stylesHopage.css"> <!--Stilo total da pagina-->
- <link rel="stylesheet" href="assets/css/radioButton.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/indexMedia.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/radioButton.css">
+  <link rel="stylesheet" href="assets/css/styleForm.css">
+
 </head>
-
 <body>
-<main id="main">
-    <section id="contact" class="contact section-bg">   <!--Inicio da section form-->
-        <div class="container" data-aos="fade-up">      <!--Inicio do container form-->
-            <!-- ############################### -->
-            <!----------------INICIO DO FORM---------------->
-            <!-- 
-                => action="/send": Define a URL para onde os dados do formulário serão enviados quando o usuário o submeter.
-                => name="send_data": Dá um nome ao formulário, que pode ser usado para referenciá-lo em scripts ou estilos.
-                => method="post": Especifica o método HTTP a ser usado ao enviar os dados. O método POST é usado para enviar dados de forma segura e não visível na URL.
-                => role="form": Indica que o elemento é um formulário, ajudando na acessibilidade e na semântica do HTML.
-                => class="php-email-form": Aplica uma classe CSS ao formulário, permitindo estilização específica através de CSS.
-            -->
-            <!-- <form action="/send" name="send_data" method="post" role="form" class="php-email-form"> -->
-            <!--Inicio do form-->
-            <form action="/send" name="send_data" method="post">
-                
-                <!-- ############################### -->
-                <!----------------IDADE---------------->
 
-                <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                        <a href="#"><img src="assets/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                        <li class="link"><a href="/">Home</a></li>
-                        <li class="link"><a href="#">Program</a></li>
-                        <li class="link"><a href="#">Service</a></li>
-                        <li class="link"><a href="#">About</a></li>
-                        <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav>
-                
-                <!-- Inicio Header -->
-                    <header class="section__container header__container">
-                        <div class="header__content">
-                        <span class="bg__blur"></span>
-                        <span class="bg__blur header__blur"></span>
-                        <h1> <span>QUAL É A SUA</span> IDADE?</h1>
-                    </header>
-                <!-- Final Header -->
-                
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                    <div class="gradient-cards">
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
 
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ENTRE 18 E 25 ANOS</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ENTRE 26 E 35 ANOS</p>
-                        </div>
-                    </div>
-                
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ENTRE 36 E 50 ANOS</p>
-                        </div>
-                    </div>
-                
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ENTRE 36 E 50 ANOS</p>
-                        </div>
-                    </div>
+<!-- Inicio Nav -->
+    <nav id="navbar" class="navbar">
+        <div class="nav__logo">
+            <a href="/"><img src="assets/img/logo.png" alt="logo" /></a>
+        </div>
+        <ul class="nav__links">
+            <!-- <li class="link"><a href="/">Home</a></li> -->
+            <!-- <li class="link"><a href="#">Program</a></li> -->
+            <!-- <li class="link"><a href="#">Service</a></li> -->
+            <!-- <li class="link"><a href="#">About</a></li> -->
+            <!-- <li class="link"><a href="#">Community</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+<!-- Final Nav -->
+
+
+<!-- Inicio do Formulario -->
+<form action="/send" method="post">
+
+    <!-- ############################### -->
+    <!----------------IDADE---------------->
+    <!-- Inicio do Container de Perguntas -->
+    <!-- Inicio do Container | Pergunta IDADE -->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUAL É A SUA</span> IDADE?</h1>
+        </header>
+        <!-- Final Header -->
+
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ENTRE 18 E 25 ANOS</p>
                     </div>
                 </div>
-                <!-- partial -->
+            </label>
 
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ENTRE 26 E 35 ANOS</p>
                     </div>
-                </footer>
-                    
-                <!-- ############################### -->
-                <!----------------RENDA---------------->
-
-
-                <!-- <nav id="navbar" class="navbar">
-                <div class="nav__logo">
-                <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
                 </div>
-                <ul class="nav__links">
-                <li class="link"><a href="/">Home</a></li>
-                <li class="link"><a href="#">Program</a></li>
-                <li class="link"><a href="#">Service</a></li>
-                <li class="link"><a href="#">About</a></li>
-                <li class="link"><a href="#">Community</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ENTRE 36 E 50 ANOS</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ENTRE 36 E 50 ANOS</p>
+                    </div>
+                </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta IDADE -->
 
-                <!-- Inicio Header -->
-                    <header class="section__container header__container">
-                        <div class="header__content">
-                        <span class="bg__blur"></span>
-                        <span class="bg__blur header__blur"></span>
-                        <h1> <span>QUAL É A SUA</span> RENDA?</h1>
-                    </header>
-                <!-- Final Header -->
 
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
+    <!-- ############################### -->
+    <!----------------RENDA---------------->
+    <!-- Inicio do Container | Pergunta RENDA -->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUAL É A SUA</span> RENDA?</h1>
+        </header>
+        <!-- Final Header -->
 
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
                         <p class="card-title">ENTRE 1.000 E 2.500 REAIS</p>
-                        </div>
                     </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
                         <p class="card-title">ENTRE 2.500 E 5.000 REAIS</p>
-                        </div>
                     </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
                         <p class="card-title">ENTRE 5.000 E 10.000 REAIS</p>
-                        </div>
                     </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
                         <p class="card-title">ACIMA DOS 10.000 REAIS</p>
-                        </div>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta RENDA -->
+    
 
-                    <!-- ############################### -->
-                    <!----------------IMOVEL---------------->
+    <!-- ############################### -->
+    <!----------------IMOVEL---------------->
+    <!-- Inicio do Container | Pergunta IMOVEL -->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>COMO É A SUA</span> RESIDENCIA?</h1>
+        </header>
+        <!-- Final Header -->
 
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>EM QUE TIPO </span> DE IMÓVEL VOCÊ VIVE?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">SEU IMÓVEL É PRÓPRIO?</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">SEU IMÓVEL É ALUGADO?</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">SEU IMÓVEL É FINANCIADO?</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">OUTRO TIPO DE PROPRIEDADE.</p>
-                        </div>
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">SEU IMÓVEL É PRÓPRIO?</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
+            </label>
 
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
-
-                <!-- ############################### -->
-                <!----------------EMPREGO---------------->
-
-
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>QUANTO TEMPO VOCÊ</span> ESTÁ NO SEU EMPREGO?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 1 A 2 ANOS.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 3 A 5 ANOS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 6 A 10 ANOS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ACIMA DE 10 ANOS.</p>
-                        </div>
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">SEU IMÓVEL É ALUGADO?</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
-
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
-
-                <!-- ############################### -->
-                <!----------------OBJETIVO---------------->
-
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>QUAL O OBJETIVO</span> DO INVESTIMENTO?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">EM EDUCAÇÃO.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">EM SAÚDE.</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">EM LAZER.</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">FONTE DE RENDA.</p>
-                        </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">SEU IMÓVEL É FINANCIADO?</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
-
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
-
-                <!-- ############################### -->
-                <!----------------INVESTIR QUANTO---------------->
-
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>QUER INVESTIR </span> QUANTO POR MÊS?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 1 A 100 REAIS.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 100 A 1.000 REAIS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 1.000 A 5.000 REAIS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ACIMA DE 5.000 REIAS.</p>
-                        </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">OUTRO TIPO DE PROPRIEDADE.</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta IMOVEL -->
+ 
 
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
+    <!-- ############################### -->
+    <!----------------EMPREGO---------------->
+    <!-- Inicio do Container | Pergunta EMPREGO -->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUANTO TEMPO VOCÊ</span> ESTÁ NO SEU EMPREGO?</h1>
+        </header>
+        <!-- Final Header -->
 
-                <!-- ############################### -->
-                <!----------------TAXA JUROS---------------->
-
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>QUER APLICAR EM QUE TAXA </span> DE JUROS?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 0.2% AO MÊS.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 0.5% AO MÊS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 0.7% AO MÊS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 0.9% AO MÊS.</p>
-                        </div>
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 1 A 2 ANOS.</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
+            </label>
 
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
-
-                <!-- ############################### -->
-                <!----------------TEMPO INVESTIMENTO---------------->
-
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>QUER INVESTIR POR</span> QUANTO TEMPO?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 1 A 2 ANOS.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 3 A 5 ANOS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">DE 6 A 10 ANOS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">ACIMA DE 10 ANOS</p>
-                        </div>
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 3 A 5 ANOS.</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
-
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
-                    </div>
-                </footer>
-
-                <!-- ############################### -->
-                <!----------------VALOR A RECEBER---------------->
-
-                <!-- <nav id="navbar" class="navbar">
-                    <div class="nav__logo">
-                    <a href="#"><img src="assets/home/img/logo.png" alt="logo" /></a>
-                    </div>
-                    <ul class="nav__links">
-                    <li class="link"><a href="/">Home</a></li>
-                    <li class="link"><a href="#">Program</a></li>
-                    <li class="link"><a href="#">Service</a></li>
-                    <li class="link"><a href="#">About</a></li>
-                    <li class="link"><a href="#">Community</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav> -->
-
-                <!-- Inicio Header -->
-                <header class="section__container header__container">
-                    <div class="header__content">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur header__blur"></span>
-                    <h1> <span>QUAL O VALOR QUER RECEBER DEPOIS </span> DESTE TEMPO?</h1>
-                </header>
-                <!-- Final Header -->
-
-                <!-- partial:index.partial.html -->
-                <div class="container">
-                <div class="gradient-cards">
-
-                    <div class="card1" value='1'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">1.000 REAIS.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card2" value='2'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">2.000 REAIS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card3" value='3'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">5.000 REAIS.</p>
-                        </div>
-                    </div>
-
-                    <div class="card4" value='4'>
-                        <div class="container-card bg-green-box">
-                            <p class="card-title">10.000 REAIS.</p>
-                        </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 6 A 10 ANOS.</p>
                     </div>
                 </div>
-                </div>
-                <!-- partial -->
-
-                <!-- Footer -->
-                <footer class="section__container footer__container">
-                    <span class="bg__blur"></span>
-                    <span class="bg__blur footer__blur"></span>
-                    <div class="footer__col">
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ACIMA DE 10 ANOS.</p>
                     </div>
-                </footer>
-                <!-- FINAL DOS CARDS DE PERGUNTAS -->
-                <!-- ############################################################################################## -->
-
-                    <!-- 
-                    => <tr class="form_wrapper">: Cria uma linha na tabela e aplica a classe CSS form_wrapper a essa linha, permitindo estilização específica através de CSS.
-                    => <td colspan='2'>: Cria uma célula na tabela que se estende por duas colunas, permitindo que o botão de envio ocupe o espaço de duas colunas.
-                    => <input type="submit" value="Prever CHURN"/>: Cria um botão de envio que, quando clicado, envia os dados do formulário.
-                    -->
-                <!-- BOTAO ENVIAR DADOS -->
-                <!-- <tr class="form_wrapper">
-                    <td colspan='2'><input type="submit" value="PREDICAO"/></td>
-                </tr> -->
-                <div class="form_wrapper">
-                    <input type="submit" value="Enviar">
                 </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta EMPREGO -->
 
-            </form> <!--FINAL DO FORMULARIO-->
-        </div> <!-- FINAL div class="container-->
-    </section><!-- End Contact Section -->
-</main><!-- End #main -->
+
+    <!-- ############################### -->
+    <!----------------OBJETIVO---------------->
+    <!-- Inicio do Container | Pergunta OBJETIVO -->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUAL O OBJETIVO</span> DO INVESTIMENTO?</h1>
+        </header>
+        <!-- Final Header -->
+
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">EM EDUCAÇÃO.</p>
+                    </div>
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">EM SAÚDE.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">EM LAZER.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">FONTE DE RENDA.</p>
+                    </div>
+                </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta OBJETIVO -->
+
+
+
+    <!-- ############################### -->
+    <!----------------QUANTO INVESTIR---------------->
+    <!-- Inicio do Container | Pergunta QUANTO INVESTIR -->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUAL VALOR VOCÊ</span> QUER INVESTIR?</h1>
+        </header>
+        <!-- Final Header -->
+
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 1 A 100 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 100 A 1.000 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 1.000 A 5.000 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ACIMA DE 5.000 REIAS.</p>
+                    </div>
+                </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta INVESTIR -->
+
+
+
+
+    <!-- ############################### -->
+    <!----------------TAXA JUROS---------------->
+    <!-- Inicio do Container | Pergunta TAXA JUROS-->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUER APLICAR EM QUE TAXA </span> DE JUROS?</h1>
+        </header>
+        <!-- Final Header -->
+
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 0.2% AO MÊS.</p>
+                    </div>
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 0.5% AO MÊS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 0.7% AO MÊS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 0.9% AO MÊS.</p>
+                    </div>
+                </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta TAXA JUROS -->
+
+
+
+    <!-- ############################### -->
+    <!----------------TEMPO INVESTIMENTO---------------->
+    <!-- Inicio do Container | Pergunta TEMPO INVESTIMENTO-->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUER INVESTIR POR</span> QUANTO TEMPO?</h1>
+        </header>
+        <!-- Final Header -->
+
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 1 A 2 ANOS.</p>
+                    </div>
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 3 A 5 ANOS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">DE 6 A 10 ANOS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">ACIMA DE 10 ANOS.</p>
+                    </div>
+                </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta TEMPO INVESTIMENTO -->
+
+
+
+
+    <!-- ############################### -->
+    <!----------------VALOR FINAL---------------->
+    <!-- Inicio do Container | Pergunta VALOR FINAL-->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>QUAL O VALOR QUER RECEBER DEPOIS </span> DESTE TEMPO?</h1>
+        </header>
+        <!-- Final Header -->
+
+        <!-- Inicio dos Cards de Perguntas --> 
+        <div class="gradient-cards">
+            <label>
+                <input type="radio" name="age-group" value="1">
+                <div class="card1">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">1.000 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="age-group" value="2">
+                <div class="card2">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">2.000 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="3">
+                <div class="card3">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">5.000 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+        
+            <label>
+                <input type="radio" name="age-group" value="4">
+                <div class="card4">
+                    <div class="container-card bg-green-box">
+                        <p class="card-title">10.000 REAIS.</p>
+                    </div>
+                </div>
+            </label>
+        </div>  <!-- Final dos Card de Perguntas --> 
+    </div>  <!-- Final do Container | Pergunta VALOR FINAL -->
+
+
+
+    <!-- ############################### -->
+    <!----------------BOTAO ENVIAR---------------->
+    <!-- Inicio do Container | Botao ENVIAR-->
+    <div class="container">
+        <!-- Inicio Header -->
+        <header class="section__container header__container">
+            <div class="header__content">
+            <span class="bg__blur"></span>
+            <span class="bg__blur header__blur"></span>
+            <h1> <span>AGORA CLICK</span> EM ENVIAR?</h1>
+        </header>
+        <!-- Final Header -->
+        <!-- Inicio Container - Botao Enviar Formulario -->
+        <div class="container">
+            <div class="gradient-cards">
+                <!-- Botao Enviar Formulario -->
+                <button type="submit" class="container-card bg-green-box">
+                    <p class="card-title">Enviar</p>
+                </button>
+            </div>
+        </div>
+        <!-- Final Container - Botao Enviar Formulario -->
+    </div>
+    
+</form> <!-- Final do Formulario-->
+
+<!-- --------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
+
+
+
 
 
     <!-- Vendor JS Files -->
@@ -648,3 +579,5 @@
 
 </body>
 </html>
+
+

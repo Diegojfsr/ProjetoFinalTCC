@@ -17,7 +17,7 @@ def home():
 
 @app.route('/dados_cliente')
 def dados_cliente():
-    return render_template("formteste.html")
+    return render_template("form.html")
 
 
 def get_data():
