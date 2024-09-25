@@ -1,0 +1,21 @@
+
+
+/* Estilo para o input do radio button */
+input[type="radio"] {
+    display: none; /* Esconde o radio button padrão */
+}
+
+/* Estilo para o label que contém o card */
+label {
+    cursor: pointer;
+    display: block;
+}
+
+/* Estilo para o card quando o radio button está selecionado */
+input[type="radio"]:checked + label .container-card {
+    background-color: #45a049; /* Cor de fundo diferente quando selecionado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+
+

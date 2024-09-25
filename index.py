@@ -12,12 +12,12 @@ modelo_pipeline = pickle.load(open('./models/model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template("homepage.html")
+    return render_template("index.html")
 
 
 @app.route('/dados_cliente')
 def dados_cliente():
-    return render_template("form.html")
+    return render_template("formteste.html")
 
 
 def get_data():
@@ -50,14 +50,14 @@ def show_data():
        'valorInvestimento', 'taxaJuros', 'situacaoInvestimento', 'retornoInvestimento',
        'jaInvesteOunao', 'tempoInvestimento']]
 
-    prediction = modelo_pipeline.predict(df)
+    prediction = modelo_pipeline.predict(df) #variavel prediction recebe o modelo treinado, fazendo predicao no df com dados recebidos do form.
 
     if prediction == 0:
-        outcome = 'Arrojado-0'
+        outcome = 'Conservador-0'
         imagem = 'Arrojado.png'
 
     if prediction == 1:
-        outcome = 'Arrojado-1'
+        outcome = 'Conservador-1'
         imagem = 'Arrojado.png'
 
     if prediction == 2:
