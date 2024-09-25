@@ -28,17 +28,14 @@ def get_data():
     intensaoInvestimento = request.form.get('intensaoInvestimento')
     valorInvestimento = request.form.get('valorInvestimento')
     taxaJuros = request.form.get('taxaJuros')
-    situacaoInvestimento = request.form.get('situacaoInvestimento')
     retornoInvestimento = request.form.get('retornoInvestimento')
-    jaInvesteOunao = request.form.get('jaInvesteOunao')
     tempoInvestimento = request.form.get('tempoInvestimento')
 
 
     d_dict = {'idade': [idade], 'renda': [renda], 'propriedadeCasa': [propriedadeCasa],
               'tempoEmpregado': [tempoEmpregado], 'intensaoInvestimento': [intensaoInvestimento],
-              'valorInvestimento': [valorInvestimento], 'taxaJuros': [taxaJuros],
-              'situacaoInvestimento': [situacaoInvestimento], 'retornoInvestimento': [retornoInvestimento],
-              'jaInvesteOunao': [jaInvesteOunao], 'tempoInvestimento': [tempoInvestimento]}
+              'valorInvestimento': [valorInvestimento], 'taxaJuros': [taxaJuros], 
+              'retornoInvestimento': [retornoInvestimento], 'tempoInvestimento': [tempoInvestimento]}
 
     return pd.DataFrame.from_dict(d_dict, orient='columns')
 
@@ -47,8 +44,7 @@ def get_data():
 def show_data():
     df = get_data()
     df = df[['idade', 'renda', 'propriedadeCasa', 'tempoEmpregado', 'intensaoInvestimento',
-       'valorInvestimento', 'taxaJuros', 'situacaoInvestimento', 'retornoInvestimento',
-       'jaInvesteOunao', 'tempoInvestimento']]
+       'valorInvestimento', 'taxaJuros', 'retornoInvestimento', 'tempoInvestimento']]
 
     prediction = modelo_pipeline.predict(df) #variavel prediction recebe o modelo treinado, fazendo predicao no df com dados recebidos do form.
 
@@ -86,7 +82,7 @@ def show_data():
 
 
 
-    return render_template('result.html', tables=[df.to_html(classes='data', header=True, col_space=10)],
+    return render_template('result.html', tables=[df.to_html(classes='data', header=True, col_space=10)], 
                            result=outcome, imagem=imagem)
 
 
