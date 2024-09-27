@@ -1,14 +1,16 @@
 
 // script.js
 document.addEventListener('DOMContentLoaded', (event) => {
-    const radioButtons = document.querySelectorAll('input[name="age-group"]');
-    let selectedValue;
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    let selectedValues = {};
 
     radioButtons.forEach(radio => {
         radio.addEventListener('change', (event) => {
-            selectedValue = event.target.value;
-            console.log(`Selected age group: ${selectedValue}`);
-            // Aqui você pode adicionar código para enviar o valor para um servidor ou armazená-lo localmente
+            const name = event.target.name;
+            const value = event.target.value;
+            selectedValues[name] = value;
+            console.log(`Selected values:`, selectedValues);
+            // Aqui você pode adicionar código para enviar os valores para um servidor ou armazená-los localmente
         });
     });
-});
+})

@@ -12,10 +12,76 @@ label {
 }
 
 /* Estilo para o card quando o radio button está selecionado */
-input[type="radio"]:checked + label .container-card {
-    background-color: #45a049; /* Cor de fundo diferente quando selecionado */
+input[type="radio"]:checked + .card .container-card{
+    background-color: #5d45a0; /* Cor de fundo diferente quando selecionado */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.btn2{
+    /* position: relative; */
+    border: 2px solid transparent;
+    /* background: linear-gradient(71deg, #080509, #1a171c, #080509);  */
+    background-color: #45a049;
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+  }
+
+  .btn2:hover{
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: hsl(0, 94%, 51%);
+}
+.btn2:checked{
+    background: hsl(0, 74%, 75%);
 }
 
 
 
+
+
+
+
+.container-card{
+    /* position: relative; */
+    border: 2px solid transparent;
+    /* background: linear-gradient(71deg, #080509, #1a171c, #080509);  */
+    background-color: #45a049;
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+  } 
+
+
+.container-card:hover{
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: hsl(0, 94%, 51%);
+}
+.container-card:checked{
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: hsl(0, 74%, 75%);
+}
+
+.container-card {
+cursor: pointer;
+}
+
+
+
+
+
+/* Estilo padrão dos cards */
+.gradient-cards .container-card {
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+/* Estilo dos cards selecionados */
+.radio-input:checked + .card1 .container-card,
+.radio-input:checked + .card2 .container-card,
+.radio-input:checked + .card3 .container-card,
+.radio-input:checked + .card4 .container-card {
+    border-color: #d61b1b; /* Cor da borda quando selecionado */
+}

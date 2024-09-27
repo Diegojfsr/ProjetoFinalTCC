@@ -9,12 +9,12 @@
     background-color: black;
   }
   
-  .container {
+  /* .container {
     width: 1200px !important;
     padding: 0 !important;
     margin-right: auto;
     margin-left: auto;
-  }
+  } */
   @media screen and (min-width: 992px) and (max-width: 1439px) {
     .container {
       max-width: 1279px !important;
@@ -56,8 +56,9 @@
     gap: 32px;
     padding: 30px;
     padding-bottom: 200px;
-
   }
+
+
   @media screen and (max-width: 991px) {
     .gradient-cards {
       grid-template-columns: 1fr;
@@ -65,33 +66,40 @@
   }
   
   
-  .card {
+  /* .card {
     max-width: 550px;
     border: 0;
     width: 100%;
     margin-inline: auto;
   }
+  .card:active {
+    background-color:rgb(193, 228, 248);
+    transform: scale(0.98);
+  }
+   */
   
-  
-  .container-card {
+  /* .container-card {
     position: relative;
     border: 2px solid transparent;
     background: linear-gradient(71deg, #080509, #1a171c, #080509);
     background-clip: padding-box;
     border-radius: 45px;
     padding: 40px;
-  }
+  } */
   
-  .container-card:hover {
+  /* .container-card:hover {
     background: rgb(193, 228, 248);
-    color: rgb(33, 0, 85);
-  }
+  } */
+
+  /* .container-card:active {
+    background: rgb(193, 228, 248);
+  } */
   
-  .container-card {
+  /* .container-card {
     cursor: pointer;
-   }
+   } */
   
-  
+/*   
   .bg-green-box,
   .bg-white-box,
   .bg-yellow-box,
@@ -128,7 +136,7 @@
   .bg-blue-box::after {
     background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
   }
-  
+   */
   .card-title {
     font-weight: 600;
     color: white;
