@@ -19,6 +19,8 @@ def home():
 def dados_cliente():
     return render_template("form.html")
 
+# Orden colunas na rede
+# 	idade	renda	propriedadeCasa	tempoEmpregado	intensaoInvestimento valorInvestimento	taxaJuros	retornoInvestimento	tempoInvestimento
 
 def get_data():
     idade = request.form.get('idade')
@@ -40,51 +42,93 @@ def get_data():
     return pd.DataFrame.from_dict(d_dict, orient='columns')
 
 
+
 @app.route('/send', methods=['POST'])
 def show_data():
     df = get_data()
     df = df[['idade', 'renda', 'propriedadeCasa', 'tempoEmpregado', 'intensaoInvestimento',
        'valorInvestimento', 'taxaJuros', 'retornoInvestimento', 'tempoInvestimento']]
 
-    prediction = modelo_pipeline.predict(df) #variavel prediction recebe o modelo treinado, fazendo predicao no df com dados recebidos do form.
 
+    prediction = modelo_pipeline.predict(df)[0]  # Acessa o primeiro elemento da previsão
+    
     if prediction == 0:
         outcome = 'Conservador-0'
-        imagem = 'Arrojado.png'
-
-    if prediction == 1:
+        imagem = 'Conservador.png'
+    elif prediction == 1:
         outcome = 'Conservador-1'
-        imagem = 'Arrojado.png'
-
-    if prediction == 2:
+        imagem = 'Conservador.png'
+    elif prediction == 2:
         outcome = 'Moderado-2'
         imagem = 'Moderado.png'
-
-    if prediction == 3:
+    elif prediction == 3:
         outcome = 'Moderado-3'
         imagem = 'Moderado.png'
-
-    if prediction == 4:
+    elif prediction == 4:
         outcome = 'Conservador-4'
         imagem = 'conservador.png'
-
-    if prediction == 5:
+    elif prediction == 5:
         outcome = 'Conservador-5'
         imagem = 'conservador.png'
-
-    if prediction == 6:
+    elif prediction == 6:
         outcome = 'Conservador-6'
         imagem = 'conservador.png'
-
-    if prediction == 7:
+    elif prediction == 7:
         outcome = 'Conservador-7'
         imagem = 'conservador.png'
-
-
 
     return render_template('result.html', tables=[df.to_html(classes='data', header=True, col_space=10)], 
                            result=outcome, imagem=imagem)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+    # prediction = modelo_pipeline.predict(df) 
+    #variavel prediction recebe o modelo treinado, fazendo predicao no df com dados recebidos do form.
+
+#     if prediction == 0:
+#         outcome = 'Conservador-0'
+#         imagem = 'Conservador.png'
+
+#     if prediction == 1:
+#         outcome = 'Conservador-1'
+#         imagem = 'Conservador.png'
+
+#     if prediction == 2:
+#         outcome = 'Moderado-2'
+#         imagem = 'Moderado.png'
+
+#     if prediction == 3:
+#         outcome = 'Moderado-3'
+#         imagem = 'Moderado.png'
+
+#     if prediction == 4:
+#         outcome = 'Conservador-4'
+#         imagem = 'conservador.png'
+
+#     if prediction == 5:
+#         outcome = 'Conservador-5'
+#         imagem = 'conservador.png'
+
+#     if prediction == 6:
+#         outcome = 'Conservador-6'
+#         imagem = 'conservador.png'
+
+#     if prediction == 7:
+#         outcome = 'Conservador-7'
+#         imagem = 'conservador.png'
+
+
+
+#     return render_template('result.html', tables=[df.to_html(classes='data', header=True, col_space=10)], 
+#                            result=outcome, imagem=imagem)
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
